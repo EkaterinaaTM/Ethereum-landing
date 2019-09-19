@@ -13,13 +13,15 @@ const BlogSection = () => {
   const [ activeSlide, setActiveSlide ] = useState(0);
 
   const togglActiveSlider = (e) => {
-    activeSlide === 100 ? setActiveSlide(0) : setActiveSlide(activeSlide + 20);
+    activeSlide === 83 ? setActiveSlide(0) : setActiveSlide(activeSlide + 16.6);
   }
   const settings = {
     dots: false,
     infinite: true,
     arrows: false, 
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2500,
     slidesToShow: 3,
     slidesToScroll: 1,
     afterChange: togglActiveSlider
