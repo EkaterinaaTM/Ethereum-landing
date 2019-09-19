@@ -1,21 +1,33 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, {Fragment} from "react"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import '../styles/index.scss';
+
+import Container from "../components/container/container";
+import Header from "../components/header/header";
+import AboutSection from "../components/aboutSection/aboutSection";
+import ResourcesSection from "../components/resourcesSection/resourcesSection";
+import CommunitySection from "../components/communitySection/communitySection";
+import BlogSection from "../components/blogSection/blogSection";
+import SocialSection from "../components/socialSection/socialSection";
+import Footer from "../components/footer/footer";
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <Fragment>
+    <Container>
+      <Header />
+      <AboutSection />
+    </Container>
+
+    <ResourcesSection />
+
+    <Container>
+      <CommunitySection />
+      <BlogSection />
+      <SocialSection />
+    </Container>
+
+    <Footer />
+  </Fragment>
 )
 
 export default IndexPage

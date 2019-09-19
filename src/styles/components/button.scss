@@ -1,0 +1,43 @@
+@mixin button-base {
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.button {
+  @include button-base;
+  &--small--green {
+    width: 120px;
+    background: radial-gradient(650.09% 100% at 50% 0%, #00FF72 0%, #00FF9D 100%);
+    box-shadow: inset 0px 1px 30px rgba(255, 0, 193, 0.195454);
+  }
+
+  &--small--purple {
+    @include button-base;
+    width: 120px;
+    background: #5B6CAD;
+  }
+
+  &--medium--green {
+    width: 170px;
+    background: radial-gradient(650.09% 100% at 50% 0%, #00FF72 0%, #00FF9D 100%);
+    box-shadow: inset 0px 1px 30px rgba(255, 0, 193, 0.195454);
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &--large--transparent {
+    width: 240px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #44DFAB;
+    &:hover {
+      background-color: #44DFAB;
+      color: #181A25;
+    }
+  }
+
+}

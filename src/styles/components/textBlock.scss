@@ -1,0 +1,60 @@
+@mixin text-block-base {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text-block {
+  @include text-block-base;
+  max-width: 324px;
+  margin: 32px 16px;
+  align-items: flex-start;
+  
+  &_text {
+    margin-top: 24px;
+  }
+
+  &--justify {
+    @include text-block-base;
+    justify-content: space-between;
+    max-width: 240px;
+    margin: 24px 16px;
+  }
+
+  &--justify-large {
+    @include text-block-base;
+    justify-content: space-between;
+    max-width: 324px;
+    height: 200px;
+    padding: 0 16px;
+
+    &:last-child {
+      background: #22273C;
+      background-blend-mode: overlay;
+      border-radius: 5px;
+    }
+  }
+  
+}
+
+// зеленая линия
+.green-line {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 255, 219, 0.0001) 0%, rgba(66, 247, 139, 0.774566) 72.3%, #00FFB5 103.85%);
+    box-shadow: 0px 0px 15px rgba(0, 255, 162, 0.15);
+}
+
+.flex-row--between .text-block:first-child span:first-of-type {
+  width: 50%;
+  margin-left: -40px;
+}
+
+
+.flex-row--between .text-block:last-child span:first-of-type {
+  width: 50%;
+  margin-left: 190px;
+}
+
+

@@ -1,0 +1,43 @@
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 24px;
+  
+    &_logo {
+      width: 47px;
+      height: 60px;
+    }
+
+    &_menu {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 42px 0;
+
+      &_item {
+        margin: 0 28px;
+        a:hover {
+          color: #44DFAB;
+        }
+      }
+
+    @media(max-width: 992px) {
+      display: none;
+    }
+    }
+    
+    &_menu-button {
+      width: 32px;
+      height: 32px;
+      display: none;
+      @media(max-width: 992px) {
+        display: block;
+      }
+      }
+
+    @media(max-width: 992px) {
+      justify-content: space-between;
+    }
+}

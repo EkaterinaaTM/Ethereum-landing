@@ -1,0 +1,22 @@
+.footer {
+  background: rgba(23, 25, 36, 0.35);
+    &_wrapper {
+    display: flex;
+    padding: 16px 98px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &_col {
+    margin-right: 48px;
+    margin-bottom: 32px;
+  }
+  &_text {
+    margin: 8px 0;
+  }
+
+  &_logo {
+    width: 92px;
+    height: 120px;
+  }
+}
