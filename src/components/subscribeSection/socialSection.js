@@ -4,8 +4,8 @@ import SectionTitle from '../sectionTitle/sectionTitle';
 import Button from '../button/button.js';
 import discordLogo from '../../images/DiscordLogo.svg';
 
-const SocialSection = () => (
-  <section className='wrapper'  id='social'>
+const SubscribeSection = () => (
+  <section className='wrapper'  id='subscribe'>
     <SectionTitle
       title='Stay up to date'
       subtitle='Get the most up-to-date newsletters delivered straight to your email. Whether you’re looking for general information, hard fork/network upgrades, or live chat the choice is yours.'
@@ -36,4 +36,4 @@ const SubscribeBlock = ({ title }) => (
   </div>
 );
 
-export default SocialSection;
+export default SubscribeSection;

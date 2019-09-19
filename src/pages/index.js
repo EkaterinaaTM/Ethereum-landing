@@ -8,7 +8,7 @@ import AboutSection from "../components/aboutSection/aboutSection";
 import ResourcesSection from "../components/resourcesSection/resourcesSection";
 import CommunitySection from "../components/communitySection/communitySection";
 import BlogSection from "../components/blogSection/blogSection";
-import SocialSection from "../components/socialSection/socialSection";
+import SubscribeSection from "../components/subscribeSection/socialSection";
 import Footer from "../components/footer/footer";
 
 const IndexPage = () => (
@@ -23,7 +23,7 @@ const IndexPage = () => (
     <Container>
       <CommunitySection />
       <BlogSection />
-      <SocialSection />
+      <SubscribeSection />
     </Container>
 
     <Footer />
