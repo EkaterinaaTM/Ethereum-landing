@@ -1,24 +1,29 @@
 @mixin input-base {
   width: 100%;
-  padding: 5px 0;
-  color: #9092A7;
+  padding: 5px;
+  color: #9092a7;
   font-weight: bold;
   background-color: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
+  border-radius: 0;
+
+  @media (max-width: 400px) {
+    padding: 10px 5px;
+  }
 }
 
 .input {
   @include input-base;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-image-source: linear-gradient(to right, white 0%, #00FFCD 100%);
+  border-image-source: linear-gradient(to right, white 0%, #00ffcd 100%);
   border-image-slice: 1;
   box-shadow: 0 10px 6px -6px rgba(255, 255, 255, 0.15);
 
   &--purple {
     @include input-base;
-    border-bottom: 2px solid #5B6CAD;
+    border-bottom: 2px solid #5b6cad;
   }
 }

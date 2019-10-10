@@ -31,7 +31,12 @@ const Footer = () => (
 
       <div className='footer_col'>
         <h3 class='subtitle_p'>Social</h3>
-        {social.map(item => <p className='footer_text'><a href={item.link} target='_blank'>{item.name}</a></p>)}
+        {social.map(item => (
+        <p className='footer_text'>
+          <a href={item.link} target='_blank'>
+            {item.name}
+          </a>
+        </p>))}
         <p className='text--green'>@ETH_Classic</p>
       </div>
 

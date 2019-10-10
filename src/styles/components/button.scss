@@ -4,40 +4,66 @@
   font-weight: bold;
   border-radius: 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .button {
   @include button-base;
-  &--small--green {
+  &--sm {
     width: 120px;
-    background: radial-gradient(650.09% 100% at 50% 0%, #00FF72 0%, #00FF9D 100%);
-    box-shadow: inset 0px 1px 30px rgba(255, 0, 193, 0.195454);
+
+    &--green {
+      background: radial-gradient(
+        650.09% 100% at 50% 0%,
+        #00ff72 0%,
+        #00ff9d 100%
+      );
+      box-shadow: inset 0px 1px 30px rgba(255, 0, 193, 0.195454);
+
+      &:hover {
+        background: radial-gradient(
+          650.09% 100% at 50% 0%,
+          #87fdbb 0%,
+          #208853 100%
+        );
+      }
+    }
   }
 
-  &--small--purple {
+  &--sm--purple {
     @include button-base;
     width: 120px;
-    background: #5B6CAD;
+    background: #5b6cad;
   }
 
-  &--medium--green {
+  &--md--green {
     width: 170px;
-    background: radial-gradient(650.09% 100% at 50% 0%, #00FF72 0%, #00FF9D 100%);
+    background: radial-gradient(
+      650.09% 100% at 50% 0%,
+      #00ff72 0%,
+      #00ff9d 100%
+    );
     box-shadow: inset 0px 1px 30px rgba(255, 0, 193, 0.195454);
     font-size: 20px;
     line-height: 23px;
+    &:hover {
+      background: radial-gradient(
+        650.09% 100% at 50% 0%,
+        #87fdbb 0%,
+        #208853 100%
+      );
+    }
   }
 
-  &--large--transparent {
+  &--lg--transparent {
     width: 240px;
     color: #fff;
     background-color: transparent;
     border-radius: 5px;
-    border: 2px solid #44DFAB;
+    border: 2px solid #44dfab;
     &:hover {
-      background-color: #44DFAB;
-      color: #181A25;
+      background-color: #44dfab;
+      color: #181a25;
     }
   }
-
 }

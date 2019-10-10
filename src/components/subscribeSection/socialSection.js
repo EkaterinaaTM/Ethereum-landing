@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SectionTitle from '../sectionTitle/sectionTitle';
+import SubscribeBlock from './subscribeBlock';
 import Button from '../button/button.js';
 import discordLogo from '../../images/DiscordLogo.svg';
 
@@ -20,20 +21,12 @@ const SubscribeSection = () => (
         <input className='input--purple' placeholder='ETC - Ethereum Classic'/>
         <div className='flex-row'>
           <p>590 user(s) online</p>
-          <Button text='Subscribe' className='button--small--purple '/>
+          <Button text='Subscribe' className='button--sm--purple '/>
         </div>
       </div>
     </div>
 
   </section>
-);
-
-const SubscribeBlock = ({ title }) => (
-  <div className='text-block--justify-large'>
-    <h4 className='title_h4' dangerouslySetInnerHTML={{ __html: title }}/>
-    <input className='input' placeholder='Enter E-mail address'/>
-    <Button text='Subscribe' className='button--small--green'/>
-  </div>
 );
 
 export default SubscribeSection;

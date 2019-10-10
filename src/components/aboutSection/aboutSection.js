@@ -2,6 +2,7 @@ import React from 'react';
 
 import SectionTitle from '../sectionTitle/sectionTitle';
 import TextBlock from '../TextBlock/TextBlock';
+import FeatureBlock from './featureBlock';
 import data from '../../data.js';
 
 const AboutSection = () => (
@@ -17,17 +18,9 @@ const AboutSection = () => (
     </div>
 
     <div className='flex-row--center'>
-      {data.features.map(feature => <FeaturesBlock {...feature} /> )}
+      {data.features.map(feature => <FeatureBlock {...feature} /> )}
     </div>
   </section>
-);
-
-
-const FeaturesBlock = ({ img, desc }) => (
-  <div className='flex-row--center_item'> 
-    <img src={img} className='flex-row--center_img'/>
-    <p dangerouslySetInnerHTML={{ __html: desc }}/>
-  </div>
 );
 
 export default AboutSection;

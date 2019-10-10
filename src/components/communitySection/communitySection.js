@@ -2,6 +2,7 @@ import React from 'react';
 
 import SectionTitle from '../sectionTitle/sectionTitle';
 import TextBlock from '../TextBlock/TextBlock';
+import FeatureBlock from './featureBlock';
 import 'animate.css/animate.min.css';
 import data from '../../data.js';
 
@@ -14,23 +15,15 @@ const CommunitySection = () => (
 
     <div className='flex-row--center'>
       {data.community.features.map(feature => (
-        <Feature {...feature} />
+        <FeatureBlock {...feature} />
       ))}
     </div>
 
     <div className='flex-row--between'>
-      {data.community.features.map(feature => <TextBlock title={feature.title} desc={feature.fullDesc} /> )}
+      {data.community.features.map(feature => <TextBlock {...feature} /> )}
     </div>
     
   </section>
 );
-
-const Feature = ({ img, title, desc }) => (
-  <div className='flex-row--center_item'>
-    <img src={img} alt='' className='flex-row--center_img'/>
-    <h3 className='title_h3'>{title}</h3>
-    <p>{desc}</p>
-  </div>
-)
 
 export default CommunitySection;

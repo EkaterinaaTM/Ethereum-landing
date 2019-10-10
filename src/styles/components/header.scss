@@ -7,10 +7,14 @@
   justify-content: flex-start;
   align-items: center;
   padding: 0 24px;
-  
+  z-index: 1;
     &_logo {
-      width: 47px;
-      height: 60px;
+      width: 70px;
+      min-height: 60px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &_menu {
@@ -36,12 +40,22 @@
       &_drop-down {
         cursor: pointer;
 
+        &_arrow {
+          display: flex;
+        }
         &_social-group {
           display: flex;
           flex-direction: column;
           align-items: center;
           position: absolute;
           transform: translate(33%);
+          @media(max-width: 992px) {
+            flex-direction: row;
+            transform: translate(-33%);
+             p {
+               margin: 8px 5px;
+             }
+          }
         }
 
         p:first-child {
@@ -49,22 +63,48 @@
         }
       }
 
-    @media(max-width: 992px) {
-      display: none;
-    }
+    // header_menu
+      @media(max-width: 992px) {
+        display: none;
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 32px;
+        &_item {
+          margin: 10px 0;
+        }
+      }
+
+      // open mobile menu
+      &.open {
+        display: flex;
+        // margin-bottom: 88px;
+      }
     }
     
-    &_menu-button {
+    &_mobile-menu {
       width: 32px;
       height: 32px;
       display: none;
+      cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%
+        }
+
       @media(max-width: 992px) {
         display: block;
       }
-      }
+    }
 
+    // header
     @media(max-width: 992px) {
       justify-content: space-between;
+      align-items: flex-start;
+      position: fixed;
+      left: 0;
+      right: 0;
+      padding-top: 24px;
+      background-color: #181A25;
     }
 }
 
@@ -74,4 +114,14 @@
   &:hover {
     color: #44DFAB;
   }
+  @media(max-width: 992px) {
+    margin-left: 8px;
+    margin-top: 12px;
+  }
 }
+// .open {
+//   width: 100%;
+//   display: flex !important;
+//   flex-direction: column;
+//   align-items: center;
+//   }

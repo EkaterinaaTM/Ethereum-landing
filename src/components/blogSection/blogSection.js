@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import SectionTitle from '../sectionTitle/sectionTitle';
-import Button from '../Button/Button';
+import Post from './post';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,7 +24,25 @@ const BlogSection = () => {
     autoplaySpeed: 2500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    afterChange: togglActiveSlider
+    afterChange: togglActiveSlider,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+    ]
   };
 
   return (
@@ -49,14 +67,5 @@ const BlogSection = () => {
     </section>
   )
 };
-
-const Post = ({ img, title, date, link }) => (
-    <div className='blog_item text-block--justify'> 
-      <img src={img} className='blog_img'/>
-      <h4 className='title_h4' dangerouslySetInnerHTML={{ __html: title }}/>
-      <p>{date}</p>
-      <a href={link} target='_blank'><Button text='Read More' className='button--large--transparent'/></a>
-    </div>
-);
 
 export default BlogSection;

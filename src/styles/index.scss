@@ -1,6 +1,7 @@
-  
 @import "normalize";
 @import "reset";
+@import "./var.scss";
+
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/about.scss";
@@ -10,36 +11,40 @@
 @import "components/input.scss";
 @import "components/textBlock.scss";
 
-$bg-color: #181A25;
-$titles: #ffffff;
-$text-color: #9092A7;
-$main-color: #44DFAB;
-$text-font-size: 14px;
-
-
 * {
   box-sizing: border-box;
   outline: none;
 }
 
-body, html {
+#___gatsby {
+  overflow: hidden;
+}
+
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url('../images//bg.png') no-repeat $bg-color;
+  background: url("../images//bg.png") no-repeat $bg-color;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
+
+  @media (max-width: 1439px) {
+    background: $bg-color;
+  }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: white;
 }
 
 a {
-  color: #9092A7;
+  color: #9092a7;
 }
 
 button {
@@ -47,7 +52,7 @@ button {
 }
 
 .text--green {
-  color: #44DFAB;
+  color: #44dfab;
 }
 
 .title_h2 {
@@ -88,7 +93,8 @@ button {
   font-size: 20px;
   line-height: 23px;
 
-  &--green, span {
+  &--green,
+  span {
     font-size: 20px;
     line-height: 23px;
     color: $main-color;
@@ -125,6 +131,7 @@ button {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  overflow: hidden;
   color: $text-color;
 }
 
@@ -138,8 +145,8 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 32px 0;
-  @media(max-width: 992px) {
-    justify-content: space-around;
+  @media (max-width: 992px) {
+    justify-content: center;
   }
 }
 
@@ -156,6 +163,9 @@ button {
     align-items: center;
     justify-content: flex-start;
     margin: 0 52px;
+    @media (max-width: 668px) {
+      margin-bottom: 16px;
+    }
 
     p {
       max-width: 196px;
