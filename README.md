@@ -7,8 +7,8 @@
   Ethereum landing with Gatsby.js
 </h1>
 
-**Start developing.**
 Сайт можно посмотреть здесь: https://ekaterinaatm.github.io/Ethereum-landing/
+**Start developing.**
 Navigate into site’s directory and start it up.
 
     ```sh
