@@ -20,6 +20,7 @@ const Header = () => {
   return (
     <header className='header'>
       <a href='#main' className='header_logo'>
+        {/* TODO logo chage sizes white u open burger */}
         <img src={logo} alt='logo' />
       </a>
 

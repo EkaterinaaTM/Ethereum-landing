@@ -1,14 +1,11 @@
-@mixin button-base {
+.button {
   padding: 16px 24px;
   margin: 24px 0;
   font-weight: bold;
   border-radius: 20px;
   text-align: center;
   cursor: pointer;
-}
-
-.button {
-  @include button-base;
+  transition: all 0.5s;
   &--sm {
     width: 120px;
 
@@ -28,12 +25,11 @@
         );
       }
     }
-  }
 
-  &--sm--purple {
-    @include button-base;
-    width: 120px;
-    background: #5b6cad;
+    &--purple {
+      width: 120px;
+      background: #5b6cad;
+    }
   }
 
   &--md--green {
@@ -46,6 +42,7 @@
     box-shadow: inset 0px 1px 30px rgba(255, 0, 193, 0.195454);
     font-size: 20px;
     line-height: 23px;
+
     &:hover {
       background: radial-gradient(
         650.09% 100% at 50% 0%,
@@ -61,9 +58,14 @@
     background-color: transparent;
     border-radius: 5px;
     border: 2px solid #44dfab;
+
     &:hover {
       background-color: #44dfab;
       color: #181a25;
     }
+  }
+
+  &--hidden {
+    visibility: hidden;
   }
 }

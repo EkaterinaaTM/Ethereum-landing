@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react"
 
-const Button = ({ text, className }) => (
-  <button className={`button ${className}`}>{text}</button>
-);
+const Button = ({ text, className, onClick }) => (
+  <button className={`button ${className}`} onClick={onClick}>
+    {text}
+  </button>
+)
 
-export default Button;
+export default Button

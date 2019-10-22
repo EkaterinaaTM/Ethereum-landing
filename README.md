@@ -9,10 +9,10 @@
 
 **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd Ethereum-landing/
     gatsby develop
     ```
 
