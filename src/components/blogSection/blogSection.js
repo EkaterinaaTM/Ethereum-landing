@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
+import ScrollAnimation from "react-animate-on-scroll"
 
-import SectionTitle from '../sectionTitle/sectionTitle';
-import Post from './post';
+import SectionTitle from "../sectionTitle/sectionTitle"
+import Post from "./post"
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
 
-import data from '../../data.js';
+import data from "../../data.js"
 
 const BlogSection = () => {
-  const [ activeSlide, setActiveSlide ] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0)
 
-  const togglActiveSlider = (e) => {
-    activeSlide === 83 ? setActiveSlide(0) : setActiveSlide(activeSlide + 16.6);
+  const togglActiveSlider = e => {
+    activeSlide === 83 ? setActiveSlide(0) : setActiveSlide(activeSlide + 16.6)
   }
   const settings = {
     dots: false,
     infinite: true,
-    arrows: false, 
+    arrows: false,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -32,7 +33,7 @@ const BlogSection = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-        }
+        },
       },
       {
         breakpoint: 520,
@@ -40,32 +41,39 @@ const BlogSection = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-        }
+        },
       },
-    ]
-  };
+    ],
+  }
 
   return (
-    <section className='wrapper'>
+    <section className="wrapper">
       <SectionTitle
-        title='Stay <span>current</span>'
-        subtitle='Stay up to date with Ethereum Classic news. Check out some of our most recent announcements and posts below.'
-        subtitleClass='subtitle_text--short'/>
+        title="Stay <span>current</span>"
+        subtitle="Stay up to date with Ethereum Classic news. Check out some of our most recent announcements and posts below."
+        subtitleClass="subtitle_text--short"
+      />
 
-      <div className='flex-row--between'>
+      <div className="flex-row--between">
         <Slider {...settings}>
-          {data.blog.map(post => <Post {...post} /> )}
+          {data.blog.map(post => (
+            <Post {...post} />
+          ))}
         </Slider>
       </div>
 
-      <div className='flex-row--center'>
-        <div className='blog_slider'>
-          <div className='blog_slider-active' style={{ left: `${activeSlide}%` }} />
+      <ScrollAnimation animateIn="fadeIn" duration={2}>
+        <div className="flex-row--center">
+          <div className="blog_slider">
+            <div
+              className="blog_slider-active"
+              style={{ left: `${activeSlide}%` }}
+            />
+          </div>
         </div>
-      </div>
-
+      </ScrollAnimation>
     </section>
   )
-};
+}
 
-export default BlogSection;
+export default BlogSection

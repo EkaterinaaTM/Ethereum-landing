@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ScrollAnimation from "react-animate-on-scroll"
 
 import SectionTitle from "../sectionTitle/sectionTitle"
 import SubscribeBlock from "./subscribeBlock"
@@ -24,21 +25,23 @@ const SubscribeSection = () => {
         <SubscribeBlock title="Hard Fork / Network Updates" />
 
         <div className="text-block--justify-large">
-          <img src={discordLogo} alt="discordLogo" className="m32" />
-          <input
-            className={`input--purple ${isSubmitted && "input--hidden"}`}
-            placeholder="ETC - Ethereum Classic"
-          />
-          {isSubmitted && <div>Thank you! You've been subscribed </div>}
-          <div className="flex-row">
-            <p>590 user(s) online</p>
-            <Button
-              text="Subscribe"
-              className={`button--sm--purple ${isSubmitted &&
-                "button--hidden"}`}
-              onClick={showThankyouNote}
+          <ScrollAnimation animateIn="fadeIn" duration={2}>
+            <img src={discordLogo} alt="discordLogo" className="m32" />
+            <input
+              className={`input--purple ${isSubmitted && "input--hidden"}`}
+              placeholder="ETC - Ethereum Classic"
             />
-          </div>
+            {isSubmitted && <div>Thank you! You've been subscribed </div>}
+            <div className="flex-row">
+              <p>590 user(s) online</p>
+              <Button
+                text="Subscribe"
+                className={`button--sm--purple ${isSubmitted &&
+                  "button--hidden"}`}
+                onClick={showThankyouNote}
+              />
+            </div>
+          </ScrollAnimation>
         </div>
       </div>
     </section>
