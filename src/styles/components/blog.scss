@@ -26,6 +26,11 @@
       transition: all 1s ease 0s;
     }
   }
+  @media (max-width: 968px) {
+    &_slider {
+      width: 70%;
+    }
+  }
 }
 
 .slick-slider {
