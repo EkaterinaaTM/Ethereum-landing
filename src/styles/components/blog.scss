@@ -1,9 +1,8 @@
 .blog {
-
   &_item {
-  min-height: 384px;
+    min-height: 384px;
   }
-  
+
   &_img {
     width: 240px;
     height: 150px;
@@ -13,7 +12,7 @@
     width: 38%;
     height: 7px;
     border-radius: 8px;
-    background-color: #1A242E;
+    background-color: #1a242e;
     position: relative;
     transition: all 0.2ms;
 
@@ -22,7 +21,7 @@
       height: 7px;
       width: 16.667%;
       border-radius: 8px;
-      background-color: #00FF25;
+      background-color: #00ff25;
       box-shadow: 0px 0px 10px rgba(0, 255, 105, 0.5);
       transition: all 1s ease 0s;
     }

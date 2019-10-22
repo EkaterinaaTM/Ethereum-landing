@@ -8,8 +8,8 @@
 </h1>
 
 **Start developing.**
-
-    Navigate into site’s directory and start it up.
+Сайт можно посмотреть здесь: https://ekaterinaatm.github.io/Ethereum-landing/
+Navigate into site’s directory and start it up.
 
     ```sh
     cd Ethereum-landing/

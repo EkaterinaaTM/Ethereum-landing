@@ -5,6 +5,13 @@ import menuButton from "../../images/menu-button.svg"
 
 const menuItems = ["About", "Resources", "Community", "Blog", "Subscribe"]
 
+const socialItems = [
+  { name: "Discord", href: "https://discordapp.com/invite/nthXNEv" },
+  { name: "Telegram", href: "https://t.me/EthereumRu" },
+  { name: "Reddit", href: "https://www.reddit.com/r/ethereum/" },
+  { name: "Forum", href: "https://forum.ethereum.org/" },
+]
+
 const Header = () => {
   const [dropDownVisibility, setdropDownVisibility] = useState("none")
   const [menuIsOpen, setMenuIsOpen] = useState("")
@@ -21,9 +28,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <a href="Ethereum-landing/#main" className="header_logo">
+      <a href="Ethereum-landing/#main">
         {/* TODO logo chage sizes white u open burger */}
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="header_logo" />
       </a>
 
       <nav className={`header_menu ${menuIsOpen}`}>
@@ -46,13 +53,15 @@ const Header = () => {
             className="header_menu_drop-down_social-group"
             style={{ display: dropDownVisibility }}
           >
-            <p className="header_menu_social-item">Discord</p>
-            <p className="header_menu_social-item">Telegram</p>
-            <p className="header_menu_social-item">Reddit</p>
-            <p className="header_menu_social-item">Forum</p>
+            {socialItems.map((item, index) => (
+              <p className="header_menu_social-item" key={index}>
+                <a href={item.href} target="_blank">
+                  {item.name}
+                </a>
+              </p>
+            ))}
           </div>
         </div>
-        {/* <i class="fas fa-chevron-down" onClick={openDropDown}></i> */}
       </nav>
 
       <div className="header_mobile-menu">

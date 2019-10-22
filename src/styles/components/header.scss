@@ -12,10 +12,6 @@
   &_logo {
     width: 70px;
     height: 60px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   &_menu {
@@ -85,13 +81,11 @@
   }
 
   &_mobile-menu {
-    width: 32px;
-    height: 32px;
     display: none;
     cursor: pointer;
     img {
-      width: 100%;
-      height: 100%;
+      width: 32px;
+      height: 32px;
     }
 
     @media (max-width: 992px) {
@@ -107,6 +101,7 @@
     left: 0;
     right: 0;
     padding-top: 24px;
+    padding-bottom: 8px;
     background-color: #181a25;
   }
 }
