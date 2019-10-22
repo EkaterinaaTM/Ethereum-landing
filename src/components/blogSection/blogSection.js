@@ -47,7 +47,7 @@ const BlogSection = () => {
   }
 
   return (
-    <section className="wrapper">
+    <section className="wrapper" id="blog">
       <SectionTitle
         title="Stay <span>current</span>"
         subtitle="Stay up to date with Ethereum Classic news. Check out some of our most recent announcements and posts below."

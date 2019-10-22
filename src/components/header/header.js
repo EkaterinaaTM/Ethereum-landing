@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <a href="#main" className="header_logo">
+      <a href="Ethereum-landing/#main" className="header_logo">
         {/* TODO logo chage sizes white u open burger */}
         <img src={logo} alt="logo" />
       </a>
@@ -29,7 +29,7 @@ const Header = () => {
       <nav className={`header_menu ${menuIsOpen}`}>
         {menuItems.map(item => (
           <p className="header_menu_item" onClick={handleMobileMenu}>
-            <a href={`#${item.toLowerCase()}`}>{item}</a>
+            <a href={`Ethereum-landing/#${item.toLowerCase()}`}>{item}</a>
           </p>
         ))}
 
